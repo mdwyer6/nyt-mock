@@ -1,0 +1,28 @@
+{
+  "name": "nyt-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdwyer6/nyt-mock.git"
+  },
+  "author": "Michael Dwyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdwyer6/nyt-mock/issues"
+  },
+  "homepage": "https://github.com/mdwyer6/nyt-mock#readme",
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1"
+  }
+}
