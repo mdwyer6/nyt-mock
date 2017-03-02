@@ -8,10 +8,9 @@ class Sidebar extends React.Component {
   	return (
       <div className="sidebar">
         <img src="https://static01.nyt.com/images/nytco/sidebar-logo.png" alt="New York Times Logo" />
-        <p>Hello</p>
         <ul className="departments">
-          {this.props.departments.map(function(arg) {
-            return (<li><Link to="/${arg}">{arg}</Link></li>);
+          {this.props.departments.map(function(arg, index) {
+            return (<li key={index}><Link to={arg.toLowerCase().replace(/ /g,"_")}>{arg}</Link></li>);
           })}
         </ul>
       </div>
