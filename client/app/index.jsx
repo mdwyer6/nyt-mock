@@ -1,10 +1,14 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-class App extends React.Component {
-  render () {
-    return <p> Hello React!</p>;
-  }
-}
+import App from './app.jsx';
+import About from './about.jsx'
 
-render(<App/>, document.getElementById('app'));
+render(
+  <Router history={browserHistory}>
+    <Route component={App}>
+      <Route path='/' component={About} />
+    </Route>
+  </Router>
+  , document.getElementById('app'));
