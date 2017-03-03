@@ -6,10 +6,16 @@ import { Provider } from 'react-redux';
 import App from './app.jsx';
 import About from './about.jsx';
 
-render(
-  <Router history={browserHistory}>
-    <Route path='/' component={App}>
-      <IndexRoute component={About} />
-    </Route>
-  </Router>
-  , document.getElementById('app'));
+import { Provider } from 'react-redux';
+import store, { history } from '../store';
+
+const router = (
+  <Provider store={store}>
+    <Router history={history}>
+      <Route path='/' component={App}>
+        <IndexRoute component={About} />
+      </Route>
+    </Router>
+  </Provider>
+);
+render(router, document.getElementById('app'));
