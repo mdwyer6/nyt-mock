@@ -6,4 +6,4 @@ const About = (props) => {
   )
 }
 
-module.exports = About;
+export default About;

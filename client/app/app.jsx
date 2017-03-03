@@ -4,23 +4,13 @@ import Sidebar from './sidebar.jsx';
 
 class App extends React.Component {
   render () {
-  	var departments = ['ADVERTISING',
-		'BUSINESS FUNCTIONS',
-		'COMMERCIAL OPERATIONS',
-		'DATA & INSIGHTS',
-		'DESIGN',
-		'EDITORIAL',
-		'FINANCE',
-		'INTERNATIONAL MEDIA CONCEPTS',
-		'INTERNATIONAL OPPORTUNITIES',
-		'INVESTOR RELATIONS'];
     return (
       <div>
-      <p>Hello</p>
-      <Sidebar departments={departments} />
+      <Sidebar departments={this.props.departments} />
+      {this.props.children}
       </div>
     )
   }
 }
 
-module.exports = App;
+export default App;
