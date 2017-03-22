@@ -8,3 +8,5 @@ const departments = ['ADVERTISING',
   'INTERNATIONAL MEDIA CONCEPTS',
   'INTERNATIONAL OPPORTUNITIES',
   'INVESTOR RELATIONS'];
+
+export default departments;

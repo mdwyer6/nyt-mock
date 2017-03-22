@@ -9,3 +9,5 @@ const listings = [
   'department': 'Engineering',
   'description': 'Lorem ipsum'
 }];
+
+export default listings;

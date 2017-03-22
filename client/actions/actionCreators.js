@@ -4,3 +4,10 @@ function expand(index) {
     index
   }
 }
+
+function add(name) {
+  return {
+    type: 'ADD_DEPARTMENT',
+    name
+  }
+}
