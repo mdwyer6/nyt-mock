@@ -1,16 +1,19 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Sidebar from './sidebar.jsx';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions/actionCreators';
+import Main from './main.jsx';
 
-class App extends React.Component {
-  render () {
-    return (
-      <div>
-      <Sidebar departments={this.props.departments} />
-      {this.props.children}
-      </div>
-    )
+function mapStateToProps(state) {
+  return {
+    departments: state.departments,
+	listings: state.listings
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+const App = connect(mapStateToProps, mapDispatchToProps)(Main);
 
 export default App;
