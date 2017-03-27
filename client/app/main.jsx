@@ -3,7 +3,6 @@ import Sidebar from './sidebar.jsx';
 
 class Main extends React.Component {
   render () {
-  console.log(this.props);
     return (
       <div>
       <Sidebar departments={this.props.departments} />
